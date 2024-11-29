@@ -1,0 +1,85 @@
+/* Light Mode (Default) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+.section {
+    margin-top: 30px;
+    border-top: 2px solid #007bff;
+    padding-top: 15px;
+}
+
+.commands {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    border-radius: 5px;
+    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #66b2ff;
+}
+
+body.dark-mode .commands {
+    background-color: #2a2a2a;
+    border-left: 4px solid #66b2ff;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#theme-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#theme-button:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode #theme-button {
+    background-color: #66b2ff;
+}
+
+body.dark-mode #theme-button:hover {
+    background-color: #4a9fd8;
+}

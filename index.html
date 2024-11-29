@@ -3,108 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Commands Documentation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Bot Commands List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="theme-toggle">
+        <button id="theme-button">Switch to Dark Mode</button>
+    </div>
     <div class="container">
         <h1>wock - commands</h1>
+        <p><em>This bot is currently a work in progress and should not be used at this time (not yet public).</em></p>
+        <p><em>If you would like your server to be whitelisted to invite the bot, please DM <strong>@qmantha</strong>.</em></p>
+
+        <!-- Section Template -->
+        <div class="section">
+            <h2>Moderation</h2>
+            <p class="commands">invoke*, purge*, setnick, resetnick, kick, ban, hackban, softban, unban, mute, unmute, muted, unmuteall, hardban, unhardban, hardbanned, setjail, unsetjail, jail, unjail, jailed, imute, iunmute, rmute, runmute, filter*, filter settings*, antilinks*, antihonde*, warn, clearwarns, listwarns, deleteinvites</p>
+        </div>
         
-        <!-- Scrollable Category Navigation -->
-        <div class="categories">
-            <button class="category-btn" onclick="showCategory('all')">All (<span id="all-count">0</span>)</button>
-            <button class="category-btn" onclick="showCategory('moderation')">Moderation (<span id="moderation-count">0</span>)</button>
-            <button class="category-btn" onclick="showCategory('fun')">Fun (<span id="fun-count">0</span>)</button>
-            <button class="category-btn" onclick="showCategory('utility')">Utility (<span id="utility-count">0</span>)</button>
-            <button class="category-btn" onclick="showCategory('roleplay')">Roleplay (<span id="roleplay-count">0</span>)</button>
+        <div class="section">
+            <h2>Roleplay</h2>
+            <p class="commands">yawn, handshake, lurk, peck, baka, cry, cuddle, dance, feed, hug, kiss, laugh, pat, poke, slap, smile, smug, tickle, wave, bite, blush, bored, facepalm, happy, highfive, pout, shrug, sleep, stare, think, thumbsup, wink, handhold, vkick, punch, shoot, yeet, nod, nope, nom</p>
+        </div>
+        
+        <div class="section">
+            <h2>Information</h2>
+            <p class="commands">ping, stats, uptime, shards, listemojis, listemotes, listinvites, listbots, listroles, serverinfo, userinfo, icon, splash, serverbanner, serveravatar, banner, avatar, inviteinfo, channelinfo, randomcolor, color, urbandictionary, firstmessage, gas, membercount, calendar, devices, spotify, github, wikipedia*, namehistory, gnames, clearnames, anime, animecharacter, manga, batoto, mangadex, anilist*, timezone*, roblox, invitecount, enlarge, joinposition, roleinfo, inrole, topcmds</p>
+        </div>
+        
+        <div class="section">
+            <h2>Economy</h2>
+            <p class="commands">daily, weekly, monthly, fish, pray, work, bet, balance, beg, salvage, mine, gamble, adventure, quiz, hunt, donate, transfer, scout, pan, explore dive, forage, cooldown</p>
+        </div>
+        
+        <div class="section">
+            <h2>Fun</h2>
+            <p class="commands">afk, quran, bible, roll, iq, howlesbian, rockpapercissors, reverse, compliment, poll, coinflip, howsmart, howcool, howretarded, howgay, height, clap, mock, dropkick, ship, lyrics, translate, quote, define, convert, meme, generatepassword, roast, 8ball, blacktea, tictactoe, chess*, uselessfact, bird, dog, cat, capybara, fox, panda, koala, duck, kangaroo, racoon, redpanda, whale</p>
+        </div>
+        
+        <div class="section">
+            <h2>Music</h2>
+            <p class="commands">pause, loop, resume, skip, stop, shuffle, volume, queue, nowplaying, search, play, move, remove, seek, clearqueue</p>
+        </div>
+        
+        <div class="section">
+            <h2>Utility</h2>
+            <p class="commands">createembed, copyembed, editembed, embed*, embed linkbutton*, embed fields*, thread*, say, edit, dm, pin, unpin, speak, selfpurge, qr, pingu, giveaway*, emoji*, role*, impersonate, lock, unlock, ghost, reveal, topic, slowmode, delete, crename, nsfw, news, zipemoji, zipsticker</p>
+        </div>
+        
+        <div class="section">
+            <h2>Configuration</h2>
+            <p class="commands">autorole*, autorole human*, autorole bots*, autoresponder*, mediaonly*, welcome*, goodbye*, joindm*, prefix*, reactionrole*, buttonrole*, menurole*, alias*, ticket*, verification*, pagination*, pingonjoin*, autopublish*, level*, voicemaster*, message*, private*, colorrole*, stickymessage*, voicetrack*</p>
+        </div>
+        
+        <div class="section">
+            <h2>Crypto</h2>
+            <p class="commands">btc, etc, usdt, usdc, bnb, xrp, busd, ada, sol, doge, dot, day, matic, avax, shib, trx, uni, wbtc, etc, leo, ltc, cro, near, xlm, atom, xmr, bch, fil, ago, ape, flow, vet, mana, hbar, xtz, aave, egld, eos, qnt, tusd, hnt, mkr, okb, zec, usdp, miota, klay, ftm, xec, neo, chz, usdd, usdn, ldo</p>
+        </div>
+        
+        <div class="section">
+            <h2>Moderation</h2>
+            <p class="commands">invoke*, purge*, setnick, resetnick, kick, ban, etc...</p>
         </div>
 
-        <!-- Command Cards -->
-        <div id="commands">
-
-            <!-- Moderation Commands -->
-            <div class="command-card moderation">
-                <h3 class="command-name">ban</h3>
-                <p class="command-description">Ban a user from the server.</p>
-                <div class="command-metadata">
-                    <div class="metadata-section">
-                        <span class="metadata-title">Aliases</span>
-                        <span>b, prohibit</span>
-                    </div>
-                    <div class="metadata-section">
-                        <span class="metadata-title">Arguments</span>
-                        <span>@user, reason</span>
-                    </div>
-                    <div class="metadata-section">
-                        <span class="metadata-title">Permissions</span>
-                        <span>Ban Members</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fun Command Example -->
-            <div class="command-card fun">
-                <h3 class="command-name">advice</h3>
-                <p class="command-description">Get a random advice.</p>
-                <div class="command-metadata">
-                    <div class="metadata-section">
-                        <span class="metadata-title">Aliases</span>
-                        <span>N/A</span>
-                    </div>
-                    <div class="metadata-section">
-                        <span class="metadata-title">Arguments</span>
-                        <span>N/A</span>
-                    </div>
-                    <div class="metadata-section">
-                        <span class="metadata-title">Permissions</span>
-                        <span>N/A</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Utility Command Example -->
-            <div class="command-card utility">
-                <h3 class="command-name">ping</h3>
-                <p class="command-description">Check the bot's latency.</p>
-                <div class="command-metadata">
-                    <div class="metadata-section">
-                        <span class="metadata-title">Aliases</span>
-                        <span>p</span>
-                    </div>
-                    <div class="metadata-section">
-                        <span class="metadata-title">Arguments</span>
-                        <span>N/A</span>
-                    </div>
-                    <div class="metadata-section">
-                        <span class="metadata-title">Permissions</span>
-                        <span>N/A</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Roleplay Command Example -->
-            <div class="command-card roleplay">
-                <h3 class="command-name">hug</h3>
-                <p class="command-description">Send a virtual hug to someone.</p>
-                <div class="command-metadata">
-                    <div class="metadata-section">
-                        <span class="metadata-title">Aliases</span>
-                        <span>N/A</span>
-                    </div>
-                    <div class="metadata-section">
-                        <span class="metadata-title">Arguments</span>
-                        <span>@user</span>
-                    </div>
-                    <div class="metadata-section">
-                        <span class="metadata-title">Permissions</span>
-                        <span>N/A</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <!-- More sections here -->
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const themeButton = document.getElementById('theme-button');
+        const body = document.body;
+
+        themeButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                themeButton.textContent = 'Switch to Light Mode';
+            } else {
+                themeButton.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
 </body>
 </html>
