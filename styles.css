@@ -1,6 +1,6 @@
 body {
-    background-color: #121212;  /* Dark background */
-    color: #ffffff;             /* White text */
+    background-color: #121212;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -10,18 +10,24 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #1e1e1e;  /* Darker background for container */
+    background-color: #1e1e1e;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);  /* Stronger shadow for depth */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
 }
 
+/* Scrollable categories */
 .categories {
     display: flex;
-    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 10px;
+    padding: 10px 0;
     margin-bottom: 20px;
 }
 
@@ -29,10 +35,11 @@ h1 {
     background-color: #2e2e2e;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 5px;
+    padding: 8px 15px;
+    border-radius: 8px;
     cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 0.9em;
     transition: background-color 0.3s;
 }
 
@@ -40,46 +47,60 @@ h1 {
     background-color: #444444;
 }
 
+/* Command card styles */
 .command-card {
-    background-color: #181818;  /* Dark card background */
-    border: 1px solid #333;     /* Border for card separation */
+    background-color: #181818;
     border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Subtle shadow for lift */
-    transition: transform 0.2s;
-}
-
-.command-card:hover {
-    transform: translateY(-5px);  /* Slight lift on hover */
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ffffff;
 }
 
 .command-name {
-    font-size: 1.6em;
-    color: #ffffff;  /* White for command name */
-    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0;
 }
 
 .command-description {
-    color: #b3b3b3;  /* Light gray for description */
-    margin-bottom: 15px;
+    color: #b3b3b3;
+    font-size: 1em;
+    margin: 5px 0 10px;
 }
 
-.command-details {
+/* Command metadata */
+.command-metadata {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    border-top: 1px solid #333;
+    padding-top: 10px;
 }
 
-.command-details span {
+.metadata-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex: 1; /* Equal width for all sections */
+}
+
+.metadata-title {
+    font-size: 0.8em;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.metadata-section span {
     background-color: #2e2e2e;
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
     color: #b3b3b3;
-    font-size: 0.9em;
-    margin: 5px 0;
-}
-
-strong {
-    color: #ff6f61;  /* Highlight color for labels (optional) */
+    font-size: 0.8em;
+    text-align: center;
+    width: 90%; /* Consistent width for each span */
 }

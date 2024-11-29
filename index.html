@@ -10,12 +10,13 @@
     <div class="container">
         <h1>wock - commands</h1>
         
-        <!-- Category Navigation -->
+        <!-- Scrollable Category Navigation -->
         <div class="categories">
-            <button class="category-btn" onclick="showCategory('all')">All</button>
-            <button class="category-btn" onclick="showCategory('moderation')">Moderation</button>
-            <button class="category-btn" onclick="showCategory('fun')">Fun</button>
-            <button class="category-btn" onclick="showCategory('utility')">Utility</button>
+            <button class="category-btn" onclick="showCategory('all')">All (<span id="all-count">0</span>)</button>
+            <button class="category-btn" onclick="showCategory('moderation')">Moderation (<span id="moderation-count">0</span>)</button>
+            <button class="category-btn" onclick="showCategory('fun')">Fun (<span id="fun-count">0</span>)</button>
+            <button class="category-btn" onclick="showCategory('utility')">Utility (<span id="utility-count">0</span>)</button>
+            <button class="category-btn" onclick="showCategory('roleplay')">Roleplay (<span id="roleplay-count">0</span>)</button>
         </div>
 
         <!-- Command Cards -->
@@ -25,42 +26,79 @@
             <div class="command-card moderation">
                 <h3 class="command-name">ban</h3>
                 <p class="command-description">Ban a user from the server.</p>
-                <div class="command-details">
-                    <span><strong>Aliases:</strong> b, prohibit</span>
-                    <span><strong>Parameters:</strong> @user, reason</span>
-                    <span><strong>Permissions:</strong> Ban Members</span>
+                <div class="command-metadata">
+                    <div class="metadata-section">
+                        <span class="metadata-title">Aliases</span>
+                        <span>b, prohibit</span>
+                    </div>
+                    <div class="metadata-section">
+                        <span class="metadata-title">Arguments</span>
+                        <span>@user, reason</span>
+                    </div>
+                    <div class="metadata-section">
+                        <span class="metadata-title">Permissions</span>
+                        <span>Ban Members</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="command-card moderation">
-                <h3 class="command-name">mute</h3>
-                <p class="command-description">Mute a user temporarily.</p>
-                <div class="command-details">
-                    <span><strong>Aliases:</strong> m</span>
-                    <span><strong>Parameters:</strong> @user, duration</span>
-                    <span><strong>Permissions:</strong> Mute Members</span>
-                </div>
-            </div>
-
-            <!-- Fun Commands -->
+            <!-- Fun Command Example -->
             <div class="command-card fun">
-                <h3 class="command-name">joke</h3>
-                <p class="command-description">Get a random joke.</p>
-                <div class="command-details">
-                    <span><strong>Aliases:</strong> jk</span>
-                    <span><strong>Parameters:</strong> N/A</span>
-                    <span><strong>Permissions:</strong> N/A</span>
+                <h3 class="command-name">advice</h3>
+                <p class="command-description">Get a random advice.</p>
+                <div class="command-metadata">
+                    <div class="metadata-section">
+                        <span class="metadata-title">Aliases</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="metadata-section">
+                        <span class="metadata-title">Arguments</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="metadata-section">
+                        <span class="metadata-title">Permissions</span>
+                        <span>N/A</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Utility Commands -->
+            <!-- Utility Command Example -->
             <div class="command-card utility">
                 <h3 class="command-name">ping</h3>
-                <p class="command-description">Check bot latency.</p>
-                <div class="command-details">
-                    <span><strong>Aliases:</strong> latency</span>
-                    <span><strong>Parameters:</strong> N/A</span>
-                    <span><strong>Permissions:</strong> N/A</span>
+                <p class="command-description">Check the bot's latency.</p>
+                <div class="command-metadata">
+                    <div class="metadata-section">
+                        <span class="metadata-title">Aliases</span>
+                        <span>p</span>
+                    </div>
+                    <div class="metadata-section">
+                        <span class="metadata-title">Arguments</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="metadata-section">
+                        <span class="metadata-title">Permissions</span>
+                        <span>N/A</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Roleplay Command Example -->
+            <div class="command-card roleplay">
+                <h3 class="command-name">hug</h3>
+                <p class="command-description">Send a virtual hug to someone.</p>
+                <div class="command-metadata">
+                    <div class="metadata-section">
+                        <span class="metadata-title">Aliases</span>
+                        <span>N/A</span>
+                    </div>
+                    <div class="metadata-section">
+                        <span class="metadata-title">Arguments</span>
+                        <span>@user</span>
+                    </div>
+                    <div class="metadata-section">
+                        <span class="metadata-title">Permissions</span>
+                        <span>N/A</span>
+                    </div>
                 </div>
             </div>
 
