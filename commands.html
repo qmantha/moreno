@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commands</title>
+  <link rel="stylesheet" href="assets/cs/commands.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <img src="https://cdn.discordapp.com/attachments/1279019189625032755/1312252102419939419/9eed591854b416b03a0b75b79bb7b0de.jpg?ex=674bd181&is=674a8001&hm=97c26d30a16db57ad4e3b94a8e595bbeb845372dcbe4f97c45ecf757ad52d63c&" alt="Bot Icon" class="bot-icon">
+    <a href="index.html" class="bot-name">wock</a>
+  </div>
+
+  <!-- Scrollable Categories -->
+  <div class="category-scroll">
+    <button class="category-btn" data-category="all">All (<span id="all-count"></span>)</button>
+    <button class="category-btn" data-category="server">Server (<span id="server-count"></span>)</button>
+    <button class="category-btn" data-category="moderation">Moderation (<span id="moderation-count"></span>)</button>
+    <button class="category-btn" data-category="information">Information (<span id="information-count"></span>)</button>
+    <button class="category-btn" data-category="roleplay">Roleplay (<span id="roleplay-count"></span>)</button>
+    <button class="category-btn" data-category="fun">Fun (<span id="fun-count"></span>)</button>
+    <button class="category-btn" data-category="miscellaneous">Miscellaneous (<span id="miscellaneous-count"></span>)</button>
+    <button class="category-btn" data-category="music">Music (<span id="music-count"></span>)</button>
+    <button class="category-btn" data-category="voicemaster">Voicemaster (<span id="voicemaster-count"></span>)</button>
+    <button class="category-btn" data-category="levels">Levels (<span id="levels-count"></span>)</button>
+    <button class="category-btn" data-category="giveaways">Giveaways (<span id="giveaways-count"></span>)</button>
+    <button class="category-btn" data-category="autorole">Autorole (<span id="autorole-count"></span>)</button>
+    <button class="category-btn" data-category="economy">Economy (<span id="economy-count"></span>)</button>
+    <button class="category-btn" data-category="crypto">Crypto (<span id="crypto-count"></span>)</button>
+    <button class="category-btn" data-category="animals">Animals (<span id="animals-count"></span>)</button>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search a command...">
+  </div>
+
+  <!-- Commands List -->
+  <div id="commands-container">
+    <!-- Server commands -->
+    <!-- Prefix -->
+    <div class="command-card server" data-category="server">
+      <div class="command-header">prefix</div>
+      <div class="command-description">Base command to set a new prefix for the bot in the guild</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">none</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">none</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="command-card server" data-category="server">
+      <div class="command-header">prefix set</div>
+      <div class="command-description">Set the guild prefix</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">new, add</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">new_prefix</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">Manage Guild</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="command-card server" data-category="server">
+      <div class="command-header">prefix reset</div>
+      <div class="command-description">Reset the guild prefix</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">restart, clear, default</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">Manage Guild</span>
+        </div>
+      </div>
+    </div>
+    <!-- Alias -->
+    <div class="command-card server" data-category="server">
+      <div class="command-header">alias</div>
+      <div class="command-description">Base command to manage command aliases, useful for server staff.</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">Manage Guild</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="command-card server" data-category="server">
+      <div class="command-header">alias add</div>
+      <div class="command-description">Add a new alias for a command</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">shortcut, command</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">Manage Guild</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="command-card server" data-category="server">
+      <div class="command-header">alias remove</div>
+      <div class="command-description">Remove a command alias</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">shortcut</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">Manage Guild</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="command-card server" data-category="server">
+      <div class="command-header">alias list</div>
+      <div class="command-description">List all command aliases</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">Manage Guild</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="command-card server" data-category="server">
+      <div class="command-header">alias global</div>
+      <div class="command-description">Subgroup to view global command aliases</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">N/A</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="command-card server" data-category="server">
+      <div class="command-header">alias global list</div>
+      <div class="command-description">List all global aliases, including those defined in commands and user-defined aliases stored in the database.</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">N/A</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="command-card server" data-category="server">
+      <div class="command-header">alias</div>
+      <div class="command-description">Res</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">Manage Guild</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fun Commands -->
+    <div class="command-card fun" data-category="fun">
+      <div class="command-header">joke</div>
+      <div class="command-description">Tell a random joke</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">none</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">none</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="command-card fun" data-category="fun">
+      <div class="command-header">meme</div>
+      <div class="command-description">Fetch a random meme</div>
+      <div class="divider"></div>
+      <div class="command-details">
+        <div class="details-item">
+          <span class="details-title">Aliases</span>
+          <span class="details-value">N/A</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Parameters</span>
+          <span class="details-value">none</span>
+        </div>
+        <div class="details-item">
+          <span class="details-title">Permissions</span>
+          <span class="details-value">none</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/commands.js"></script>
+</body>
+</html>
