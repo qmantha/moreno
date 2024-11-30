@@ -1,0 +1,125 @@
+/* ------------------------------------ */
+/* Styling for the Header */
+/* ------------------------------------ */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #1e1e1e; /* Warna latar belakang header */
+  border-bottom: 1px solid #333; /* Garis bawah untuk pemisah */
+}
+
+.bot-icon {
+  width: 50px; /* Ukuran ikon bot */
+  height: 50px;
+  border-radius: 50%; /* Membuat ikon menjadi bulat */
+  margin-right: 10px; /* Jarak antara ikon dan nama bot */
+}
+
+.bot-name {
+  font-size: 1.5em; /* Ukuran font untuk nama bot */
+  color: white;
+  text-decoration: none; /* Menghilangkan garis bawah pada teks */
+}
+
+/* ------------------------------------ */
+/* Scrollable Categories */
+/* ------------------------------------ */
+.category-scroll {
+  display: flex;
+  overflow-x: auto; /* Membuat kategori dapat digeser secara horizontal */
+  padding: 10px;
+  background-color: #1e1e1e; /* Warna latar belakang kategori */
+  border-bottom: 1px solid #333; /* Garis bawah untuk pemisah */
+}
+
+.category-btn {
+  cursor: pointer; /* Mengubah kursor menjadi pointer saat dihover */
+  border: none; /* Menghapus border default tombol */
+  padding: 10px;
+  margin: 0 5px; /* Memberikan jarak antar tombol */
+  background-color: transparent; /* Warna latar default tombol */
+  color: #fff; /* Warna teks tombol */
+  font-size: 12px;
+  border-radius: 25px; /* Membuat sudut tombol membulat */
+  transition: background-color 0.2s ease; /* Animasi perubahan warna saat hover */
+}
+
+.category-btn:hover {
+  background-color: #7a776e; /* Warna saat tombol dihover */
+}
+
+.category-btn.active {
+  background-color: #5c5952; /* Warna tombol kategori yang aktif */
+}
+
+/* ------------------------------------ */
+/* Search Bar */
+/* ------------------------------------ */
+.search-bar {
+  padding: 10px 20px;
+  background-color: #1e1e1e; /* Warna latar belakang search bar */
+}
+
+#search-input {
+  width: 100%; /* Lebar penuh untuk input pencarian */
+  padding: 10px;
+  border-radius: 20px; /* Membuat input berbentuk membulat */
+  border: none; /* Menghapus border default input */
+  background-color: #333; /* Warna latar input pencarian */
+  color: white; /* Warna teks dalam input */
+  outline: none; /* Menghapus outline default saat fokus */
+}
+
+/* ------------------------------------ */
+/* Command Cards */
+/* ------------------------------------ */
+.command-card {
+  background-color: #1e1e1e; /* Warna latar belakang kartu */
+  border-radius: 25px; /* Membuat sudut kartu membulat */
+  padding: 20px;
+  margin: 25px auto; /* Jarak antar kartu dan posisi tengah */
+  width: 80%; /* Lebar kartu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan untuk kartu */
+}
+
+.command-header {
+  font-size: 1.5em; /* Ukuran teks judul command */
+  font-weight: bold;
+}
+
+.command-description {
+  font-size: 0.9em; /* Ukuran teks deskripsi command */
+  margin-top: 5px;
+  color: #b3b3b3; /* Warna teks deskripsi command */
+}
+
+.divider {
+  height: 2px; /* Ketebalan divider */
+  background-color: #333; /* Warna divider */
+  margin: 15px 0; /* Jarak atas dan bawah divider */
+}
+
+/* ------------------------------------ */
+/* Command Details */
+/* ------------------------------------ */
+.command-details {
+  margin-top: 15px; /* Jarak atas untuk detail command */
+}
+
+.details-item {
+  display: grid;
+  grid-template-columns: 1fr; /* Membuat elemen detail berbentuk grid */
+  gap: 5px; /* Jarak antar elemen detail */
+  margin-bottom: 10px;
+}
+
+.details-title {
+  font-weight: bold; /* Judul detail dibuat tebal */
+  color: #5c5952;
+}
+
+.details-value {
+  color: #b3b3b3; /* Warna teks detail */
+  margin-left: 0px; /* Tidak ada margin kiri */
+}
