@@ -1,86 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Commands List</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Landing Page</title>
+  <link rel="stylesheet" href="assets/cs/landing.css">
 </head>
 <body>
-    <div class="theme-toggle">
-        <button id="theme-button">Switch to Dark Mode</button>
+  <div class="loading-screen" id="loadingScreen">
+    <img src="https://cdn.discordapp.com/attachments/1279019189625032755/1312252102419939419/9eed591854b416b03a0b75b79bb7b0de.jpg?ex=674bd181&is=674a8001&hm=97c26d30a16db57ad4e3b94a8e595bbeb845372dcbe4f97c45ecf757ad52d63c&" alt="Bot Avatar" class="avatar">
+  </div>
+
+  <div class="main-content" id="mainContent">
+    <h1 class="bot-name">wock</h1>
+    <div class="button-container">
+      <a href="commands.html" class="button">cmds</a>
+      <a href="assets/html/terms.html" class="button">terms</a>
+      <a href="assets/html/privacy.html" class="button">privacy</a>
     </div>
-    <div class="container">
-        <h1>wock - commands</h1>
-        <p><em>This bot is currently a work in progress and should not be used at this time (not yet public).</em></p>
-        <p><em>If you would like your server to be whitelisted to invite the bot, please DM <strong>@qmantha</strong>.</em></p>
+  </div>
 
-        <!-- Section Template -->
-        <div class="section">
-            <h2>Moderation</h2>
-            <p class="commands">invoke*, purge*, setnick, resetnick, kick, ban, hackban, softban, unban, mute, unmute, muted, unmuteall, hardban, unhardban, hardbanned, setjail, unsetjail, jail, unjail, jailed, imute, iunmute, rmute, runmute, filter*, filter settings*, antilinks*, antihonde*, warn, clearwarns, listwarns, deleteinvites</p>
-        </div>
-        
-        <div class="section">
-            <h2>Roleplay</h2>
-            <p class="commands">yawn, handshake, lurk, peck, baka, cry, cuddle, dance, feed, hug, kiss, laugh, pat, poke, slap, smile, smug, tickle, wave, bite, blush, bored, facepalm, happy, highfive, pout, shrug, sleep, stare, think, thumbsup, wink, handhold, vkick, punch, shoot, yeet, nod, nope, nom</p>
-        </div>
-        
-        <div class="section">
-            <h2>Information</h2>
-            <p class="commands">ping, stats, uptime, shards, listemojis, listemotes, listinvites, listbots, listroles, serverinfo, userinfo, icon, splash, serverbanner, serveravatar, banner, avatar, inviteinfo, channelinfo, randomcolor, color, urbandictionary, firstmessage, gas, membercount, calendar, devices, spotify, github, wikipedia*, namehistory, gnames, clearnames, anime, animecharacter, manga, batoto, mangadex, anilist*, timezone*, roblox, invitecount, enlarge, joinposition, roleinfo, inrole, topcmds</p>
-        </div>
-        
-        <div class="section">
-            <h2>Economy</h2>
-            <p class="commands">daily, weekly, monthly, fish, pray, work, bet, balance, beg, salvage, mine, gamble, adventure, quiz, hunt, donate, transfer, scout, pan, explore dive, forage, cooldown</p>
-        </div>
-        
-        <div class="section">
-            <h2>Fun</h2>
-            <p class="commands">afk, quran, bible, roll, iq, howlesbian, rockpapercissors, reverse, compliment, poll, coinflip, howsmart, howcool, howretarded, howgay, height, clap, mock, dropkick, ship, lyrics, translate, quote, define, convert, meme, generatepassword, roast, 8ball, blacktea, tictactoe, chess*, uselessfact, bird, dog, cat, capybara, fox, panda, koala, duck, kangaroo, racoon, redpanda, whale</p>
-        </div>
-        
-        <div class="section">
-            <h2>Music</h2>
-            <p class="commands">pause, loop, resume, skip, stop, shuffle, volume, queue, nowplaying, search, play, move, remove, seek, clearqueue</p>
-        </div>
-        
-        <div class="section">
-            <h2>Utility</h2>
-            <p class="commands">createembed, copyembed, editembed, embed*, embed linkbutton*, embed fields*, thread*, say, edit, dm, pin, unpin, speak, selfpurge, qr, pingu, giveaway*, emoji*, role*, impersonate, lock, unlock, ghost, reveal, topic, slowmode, delete, crename, nsfw, news, zipemoji, zipsticker</p>
-        </div>
-        
-        <div class="section">
-            <h2>Configuration</h2>
-            <p class="commands">autorole*, autorole human*, autorole bots*, autoresponder*, mediaonly*, welcome*, goodbye*, joindm*, prefix*, reactionrole*, buttonrole*, menurole*, alias*, ticket*, verification*, pagination*, pingonjoin*, autopublish*, level*, voicemaster*, message*, private*, colorrole*, stickymessage*, voicetrack*</p>
-        </div>
-        
-        <div class="section">
-            <h2>Crypto</h2>
-            <p class="commands">btc, etc, usdt, usdc, bnb, xrp, busd, ada, sol, doge, dot, day, matic, avax, shib, trx, uni, wbtc, etc, leo, ltc, cro, near, xlm, atom, xmr, bch, fil, ago, ape, flow, vet, mana, hbar, xtz, aave, egld, eos, qnt, tusd, hnt, mkr, okb, zec, usdp, miota, klay, ftm, xec, neo, chz, usdd, usdn, ldo</p>
-        </div>
-        
-        <div class="section">
-            <h2>Moderation</h2>
-            <p class="commands">invoke*, purge*, setnick, resetnick, kick, ban, etc...</p>
-        </div>
-
-        <!-- More sections here -->
-    </div>
-
-    <script>
-        const themeButton = document.getElementById('theme-button');
-        const body = document.body;
-
-        themeButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
-                themeButton.textContent = 'Switch to Light Mode';
-            } else {
-                themeButton.textContent = 'Switch to Dark Mode';
-            }
-        });
-    </script>
+  <script src="assets/js/landing.js"></script>
 </body>
 </html>
