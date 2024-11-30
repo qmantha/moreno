@@ -1,20 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   const categories = [
-      "server", 
-      "moderation",
-      "information", 
-      "roleplay",
-      "fun", 
-      "miscellaneous", 
-      "music",
-      "voicemaster", 
-      "levels", 
-      "giveaway", 
-      "autorole", 
-      "economy", 
-      "crypto", 
-      "animal"]; // Define all categories
-  let currentCategory = "all"; // Track the currently selected category
+    "server",
+    "moderation",
+    "information",
+    "roleplay",
+    "fun",
+    "miscellaneous",
+    "music",
+    "voicemaster",
+    "levels",
+    "giveaways",
+    "autorole",
+    "economy",
+    "crypto",
+    "animals"
+  ];
+  let currentCategory = "all";
 
   // Update the count for each category
   function updateCategoryCounts() {
@@ -22,17 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     categories.forEach((category) => {
       const count = document.querySelectorAll(`.command-card.${category}`).length;
-      document.getElementById(`${category}-count`).textContent = count; // Update the count
+      document.getElementById(`${category}-count`).textContent = count;
       allCount += count;
     });
 
-    document.getElementById("all-count").textContent = allCount; // Update total count
+    document.getElementById("all-count").textContent = allCount;
   }
 
   // Function to show commands by category
   function showCategory(category) {
     const allCards = Array.from(document.querySelectorAll(".command-card"));
-    currentCategory = category; // Update the current category
+    currentCategory = category;
 
     // Sort cards alphabetically
     const sortedCards = allCards.sort((a, b) => {
@@ -52,12 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Update the active category button
     document.querySelectorAll(".category-btn").forEach((btn) => {
-      btn.style.backgroundColor = ""; // Reset background color
+      btn.style.backgroundColor = "";
     });
 
     const activeButton = document.querySelector(`.category-btn[data-category="${category}"]`);
     if (activeButton) {
-      activeButton.style.backgroundColor = "#5c5952"; // Highlight the selected category
+      activeButton.style.backgroundColor = "#5c5952";
     }
   }
 
@@ -83,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Attach event listeners to category buttons
   document.querySelectorAll(".category-btn").forEach((button) => {
     button.addEventListener("click", (e) => {
-      const selectedCategory = e.target.getAttribute("data-category"); // Get the category
+      const selectedCategory = e.target.getAttribute("data-category");
       showCategory(selectedCategory);
-      document.getElementById("search-input").value = ""; // Clear the search input
+      document.getElementById("search-input").value = "";
     });
   });
 
