@@ -1,25 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bot Landing Page</title>
-  <link rel="stylesheet" href="assets/cs/landing.css">
+    <title>mel</title>
+    <meta property="og:title" content="mel" />
+    <meta property="og:description" content="A multi-purpose bot with over more than 500+ commands to enhance your server experience!" />
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1206215748360343586/1313160206712176721/6f5dbd047922022ea70ee45c5dcef663.png?ex=674f1f3e&is=674dcdbe&hm=b288b379b992ceb11c9b345b0be489f9403722c4836335d30a705179de2b10da&" />
+    <meta property="og:url" content="https://qmantha.netlify.app" />
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1206215748360343586/1313160206712176721/6f5dbd047922022ea70ee45c5dcef663.png?ex=674f1f3e&is=674dcdbe&hm=b288b379b992ceb11c9b345b0be489f9403722c4836335d30a705179de2b10da&" type="image/x-icon" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
-<body>
-  <div class="loading-screen" id="loadingScreen">
-    <img src="https://cdn.discordapp.com/attachments/1279019189625032755/1312252102419939419/9eed591854b416b03a0b75b79bb7b0de.jpg?ex=674bd181&is=674a8001&hm=97c26d30a16db57ad4e3b94a8e595bbeb845372dcbe4f97c45ecf757ad52d63c&" alt="Bot Avatar" class="avatar">
-  </div>
-
-  <div class="main-content" id="mainContent">
-    <h1 class="bot-name">wock</h1>
-    <div class="button-container">
-      <a href="commands.html" class="button">cmds</a>
-      <a href="assets/html/terms.html" class="button">terms</a>
-      <a href="assets/html/privacy.html" class="button">privacy</a>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <div class="text-center">
+        <div class="flex justify-center mb-4">
+            <img alt="Avatar" class="rounded-full" height="100" src="https://cdn.discordapp.com/attachments/1206215748360343586/1313160206712176721/6f5dbd047922022ea70ee45c5dcef663.png?ex=674f1f3e&is=674dcdbe&hm=b288b379b992ceb11c9b345b0be489f9403722c4836335d30a705179de2b10da&" width="100"/>
+        </div>
+        <h1 class="text-5xl font-bold mb-4">Glo</h1>
+        <div class="flex space-x-4 text-sm mt-2">
+            <a href="commands.html" class="hover:underline">Commands</a>
+            <a href="terms.html" class="hover:underline">Terms of Service</a>
+            <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+        </div>
+        <div class="mt-4">
+            <a href="faq.html" class="hover:underline text-sm">FAQ</a>
+        </div>
     </div>
-  </div>
-
-  <script src="assets/js/landing.js"></script>
+    <script type="module">
+        import ionicons from 'https://cdn.jsdelivr.net/npm/ionicons/+esm'
+    </script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/esm/ionicons.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/ionicons/dist/collection/components/icon/icon.min.css" rel="stylesheet">
 </body>
 </html>
