@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wonder - Frequently Asked Questions about the exclusive private bot designed for specific communities.">
+    <meta name="keywords" content="Wonder Bot, FAQ, Private Bot, Exclusive Communities, Discord Bot">
+    <meta name="author" content="Wonder Team">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Wonder - FAQ">
+    <meta property="og:description" content="A multi-purpose bot with over more than 500+ commands to enhance your server experience!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/x24u/Images/refs/heads/main/ff871ab6c9cdea9cc8b5e2e5dc13bae4.jpg">
+    <meta property="og:url" content="https://wonderbot.netlify.app/faq" />
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wonder - FAQ">
+    <meta name="twitter:description" content="Learn more about Wonder, an exclusive private bot for specific communities.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/x24u/Images/refs/heads/main/ff871ab6c9cdea9cc8b5e2e5dc13bae4.jpg">
+    <meta name="twitter:creator" content="@WonderTeam">
+
+    <!-- Favicon Assets -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#000000">
+
+    <title>Frequently Asked Questions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <style>
+        .faq-item h2 i {
+            transition: transform 0.5s ease;
+        }
+        .faq-item h2 i.rotate-up {
+            transform: rotate(180deg);
+        }
+        .faq-content {
+            transition: max-height 0.3s ease, opacity 0.5s ease;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .faq-content.show {
+            max-height: 1000px; /* Arbitrary large value to ensure it expands fully */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans">
+    <div class="max-w-screen-md mx-auto p-6">
+        <div class="flex items-center mb-4">
+            <img alt="Avatar" class="rounded-full w-12 h-12 mr-4" height="50" src="https://raw.githubusercontent.com/x24u/Images/refs/heads/main/ff871ab6c9cdea9cc8b5e2e5dc13bae4.jpg" width="50"/>
+            <a class="text-xl font-bold text-white" href="index.html">Wonder</a>
+        </div>
+        <hr class="border-gray-600 mb-4"/>
+        <h1 class="text-center text-2xl font-bold mb-6">Frequently Asked Questions</h1>
+        <div class="space-y-0">
+            <div class="faq-item rounded-lg">
+                <h2 class="font-bold text-lg flex justify-between items-center cursor-pointer bg-[#1e1e1e] p-4 rounded-t-lg" onclick="toggleFaqContent(0)">
+                    Is wonder available for free and public use?
+                    <i class="fas fa-chevron-down rotate-up" id="icon-0"></i>
+                </h2>
+                <div class="faq-content bg-[#2a2a2a] p-4 rounded-b-lg">
+                    <p>No. Wonder is currently a private bot designed for exclusive use in specific communities.</p>
+                </div>
+            </div>
+            <div class="faq-item rounded-lg">
+                <h2 class="font-bold text-lg flex justify-between items-center cursor-pointer bg-[#1e1e1e] p-4 rounded-t-lg" onclick="toggleFaqContent(1)">
+                    Why isn't it a public bot?
+                    <i class="fas fa-chevron-down rotate-up" id="icon-1"></i>
+                </h2>
+                <div class="faq-content bg-[#2a2a2a] p-4 rounded-b-lg">
+                    <p>Wonder remains private due to its ongoing development and its current beta testing phase.</p>
+                </div>
+            </div>
+            <div class="faq-item rounded-lg">
+                <h2 class="font-bold text-lg flex justify-between items-center cursor-pointer bg-[#1e1e1e] p-4 rounded-t-lg" onclick="toggleFaqContent(2)">
+                    When will it be released to the public?
+                    <i class="fas fa-chevron-down rotate-up" id="icon-2"></i>
+                </h2>
+                <div class="faq-content bg-[#2a2a2a] p-4 rounded-b-lg">
+                    <p>Currently, there is no estimated release date for Wonder public availability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to toggle FAQ content visibility and icon rotation
+        function toggleFaqContent(index) {
+            const contents = document.querySelectorAll('.faq-content');
+            const icons = document.querySelectorAll('.faq-item h2 i');
+            contents.forEach((content, i) => {
+                if (i === index) {
+                    const isVisible = content.classList.contains('show');
+                    content.classList.toggle('show', !isVisible);
+                    icons[i].classList.toggle('rotate-up', !isVisible);
+                } else {
+                    content.classList.remove('show');
+                    icons[i].classList.remove('rotate-up');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
